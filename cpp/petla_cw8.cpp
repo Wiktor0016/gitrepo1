@@ -1,5 +1,5 @@
 /*
- * kalkulator.cpp
+ * petla_cw8.cpp
  * 
  * Copyright 2017  <>
  * 
