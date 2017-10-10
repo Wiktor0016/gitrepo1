@@ -1,15 +1,25 @@
-/*
- * petle_cw2.cpp
- */
 
 
 #include <iostream>
 
+using namespace std;
+
 int main(int argc, char **argv)
 {
-    for (int i=1; n<10; i++;
-    cout << " " << i << " " << endl;
+	int i, a, b;
+    
+    cout << "Podaj przedzial: " << endl;
+    cin >> a;
+    cin >> b;
+    if ( a > 0 && b > 0 )
+{
+     for ( i = a; (i >= a && i <= b) ; i++)  
+        {  
+        cout << " " << i;
+        }
+}
+    else
+     {   cout << "Podałeś zły przedział" << endl; }
         
 	return 0;
 }
-
