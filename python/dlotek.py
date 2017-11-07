@@ -7,7 +7,7 @@ def losuj(ileliczb, maksliczb):
     liczby = []  # pusta lista
 
     ile = 0  # ilość unikalnych liczb
-    #  for i in range(ileliczb):
+    # for i in range(ileliczb):
     while ile < ileliczb:
         liczba = random. randint(0, maksliczb)
         if liczby.count(liczba) == 0:
@@ -24,11 +24,16 @@ def main(args):
     liczby = losuj(ileliczb, maksliczb)
 
     typy = set()  # pusty zbiór
-    for i in random(ileliczb):
+    # for i in range(ileliczb):
+    ile = 0
+    while ile < ileliczb:
         typ = input("Podaj typ: ")
-        typy.add(typ)
-
+        if typ not in typy:
+            typy.add(typ)
+            ile += 1
+    print()
     print(typy)
+
     return 0
 
 
