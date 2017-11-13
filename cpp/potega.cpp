@@ -3,7 +3,7 @@
  * 
  * a0 = 1
  * a1 = a
- * an = a * ... * a (n-czynnikÃ³w) dla n zaw. N+ - {1}
+ * an = a * ... * a (n-czynników) dla n zaw. N+ - {1}
  */
 
 
@@ -25,10 +25,15 @@ int main(int argc, char **argv)
 {
     int n;
     float x;
-    cout << "Podaj podstawe potÄ™gi: " << endl;
+    cout << "Podaj podstawe potêgi: " << endl;
     cin >> x;
-    cout << "Podaj wykÅ‚adnik potÄ™gi: " << endl;
+    cout << "Podaj wyk³adnik potêgi: " << endl;
     cin >> n;
-    cout << "PotÄ™ga: " << potega_it(x, n) <<endl;
+    cout << "Potêga: " << potega_it(x, n) <<endl;
 	return 0;
 }
+
+
+if __name__ == '__main__':
+    import sys
+    sys.exit(main(sys.argv))
