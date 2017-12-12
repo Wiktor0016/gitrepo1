@@ -16,6 +16,12 @@ def nwd_v2(a, b):
     return b
 
 
+def euk_rek(a, b):
+    if b == 0:
+        return a
+    return euk_rek(b, a % b)
+
+
 def main(args):
     a = int(input("Podaj liczbę naturalną: "))
     b = int(input("Podaj liczbę naturalną: "))

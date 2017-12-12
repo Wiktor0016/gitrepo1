@@ -1,9 +1,9 @@
 /*
  * potega.cpp
- * 
+ *
  * a0 = 1
  * a1 = a
- * an = a * ... * a (n-czynników) dla n zaw. N+ - {1}
+ * an = a * ... * a (n-czynnikÃ³w) dla n zaw. N+ - {1}
  */
 
 
@@ -21,19 +21,23 @@ float potega_it(float x, int n)
     return wynik;
 }
 
+int potega_rek(int x, int n)
+{    
+    if (x == 0)
+        return 0;
+    else if (n == 0)
+        return 1;
+    return potega_rek(x, n - 1) * x;
+}
+
 int main(int argc, char **argv)
 {
     int n;
     float x;
-    cout << "Podaj podstawe potêgi: " << endl;
+    cout << "Podaj podstawe potÄ™gi: " << endl;
     cin >> x;
-    cout << "Podaj wyk³adnik potêgi: " << endl;
+    cout << "Podaj wykÅ‚adnik potÄ™gi: " << endl;
     cin >> n;
-    cout << "Potêga: " << potega_it(x, n) <<endl;
+    cout << "PotÄ™ga: " << potega_rek(x, n) <<endl;
 	return 0;
 }
-
-
-if __name__ == '__main__':
-    import sys
-    sys.exit(main(sys.argv))

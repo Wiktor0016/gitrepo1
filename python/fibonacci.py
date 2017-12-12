@@ -32,6 +32,12 @@ def fib_iter2(n):
     for i in range(2, n):
         a, b = b, a + b
         print(a, " ", b)
+# fib_rek(n) = 1 dla n {0, 1}
+# fib_rel(n) = fib_rek(n - 1) + fib_rek(n - 2) dla n > 1
+def fib_rek(n):
+    if n < 2:
+        return 1
+    return fib_rek(n - 1) + fib_rek(n - 2)
 
 
 def main(args):
