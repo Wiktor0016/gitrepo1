@@ -1,20 +1,19 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-#  ciag_rek.py
+# rekurencje5.py
 #
-# a1 = 2
-# an = an-1 * n^2 + 1
 
 
 def ciag_rek(n):
-    if n == 2:
-        return 1
-    return ciag_rek(n - 1) * (n ^ 2 + 1)
+    if n == 0:
+        return 0
+    return ciag_rek(n - 1) + 1 + (n - 1) * 2
 
 
 def main(args):
-
+    n = int(input("Który wyraz ciągu? "))
+    print(ciag_rek(n))
     return 0
 
 

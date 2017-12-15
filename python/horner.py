@@ -1,29 +1,32 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+#
+#  horner.py
 
-
-def horner(k, tb, x):
+def horner_it(stopien, tb, x):
 	wynik = tb[0]
-	for i in range(1, k + 1):
+	for i in range(1, stopien + 1):
 		wynik = wynik * x + tb[i]
-		
+	
 	return wynik
 
-def hor_rek(n):
-    
+def horner_rek(stopien, tb, x):	
+	if stopien == 0:
+		return tb[0]
+	return horner_rek(stopien - 1, tb, x) * x + tb[stopien]
+
 
 def main(args):
 	tb = []
-	k = 3
-	x = int(input("Podaj wartość argumentu: "))
-	for i in range(0, 4):
-		tmp = int(input("podaj wartości indeksów: "))
+	stopien = 3
+	x = int(input("Podaj wartosc x: "))
+	for i in range(0, 4):		
+		tmp = int(input("Podaj wspolczynniki: "))
 		tb.append(tmp)
-	print("wynik wielomianu wynosi: ", horner(k, tb, x))
+		
+	print("Wynik: ", horner_rek(stopien, tb, x))
 	return 0
-
 
 if __name__ == '__main__':
     import sys
     sys.exit(main(sys.argv))
-

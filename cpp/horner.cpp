@@ -1,5 +1,6 @@
 /*
  * horner.cpp
+ * 
  */
 
 
@@ -7,18 +8,22 @@
 
 using namespace std;
 
-// w(x) = 2x^3+3x^2+5x+4
-// w(x) = (2x^2+3x+5) +4
-// w(x) = x(x(2x + 3) + 5) + 4
-float horner_it(int k, float tbwsp[], float x){
-    int i;
-    float wynik = tbwsp[0];
-    for (i = 1; i < k+1; i++){
-        wynik = wynik *x + tbwsp[i];
-        }
-        return wynik;
+float horner_it(int stopien, float tb[], float x)
+{
+    float wynik = tb[0];
+    for ( int i = 1; i < stopien+1; i++)
+    {
+        wynik = wynik * x + tb[i];
     }
+    return wynik;
+}
 
+float horner_rek(int stopien, float tb[], float x)
+{	
+	if (stopien == 0)
+		return tb[0];
+	return horner_rek(stopien - 1, tb, x) * x + tb[stopien];
+}
 
 
 int main(int argc, char **argv)
@@ -26,14 +31,14 @@ int main(int argc, char **argv)
 	int stopien = 3;
     float x;
     float tbwsp[4];
-    cout<<"Podaj wartoÅ›Ä‡ x: ";
-    cin>>x;
+	cout << "Podaj wartoœæ x: " << endl;
+    cin >> x;
+    for(int i = 0; i < 4; i++)
+    {
+        cout << "Podaj wspó³czynnik: " << endl;
+        cin >> tbwsp[i];
+    }
+    cout << "Wynik: " << horner_rek(stopien, tbwsp, x) << endl;
     
-    for(int i=0; i < 4; i++){
-            cout<<"podaj wartosci indeskÃ³w: ";
-            cin >> tbwsp[i];
-        }
-        cout<<horner_it(stopien, tbwsp, x )<<endl;
-	return 0
+    return 0;
 }
-
