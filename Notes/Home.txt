@@ -1,0 +1,21 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2018-01-11T08:34:43+01:00
+
+====== Algorytmy ======
+
+Najważniejsze własności algorytmów:
+
+* poprawność
+* skończoność
+* złożoność
+* efektywność
+
+Algorytm jest **poprawny**,jeżeli rozwiązuje problem
+zgodnie ze **specyfikacją problemu**.
+
+**Dedukcja** – rodzaj rozumowania logicznego, mającego na celu dojście do określonego wniosku na podstawie założonego wcześniej zbioru przesłanek.
+
+**Indukcja** – typ rozumowania redukcyjnego określany jako wnioskowanie „od szczegółu do ogółu”, czyli wnioskowanie o prawdziwości racji.
+
+Błędy
