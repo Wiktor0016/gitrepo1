@@ -18,6 +18,22 @@ def konwersja1(liczba10, podstawa):
     return "".join(liczba)  # złączenie elementów listy
 
 
+def konwersja2(liczba, podstawa):
+    """
+    Funkja konwetuje podaną liczbę w systemie o podanej podstawie na system dziesiętny
+    """
+
+        liczba10 = 0  # warość dziesiętna liczby
+        potega = len(liczba) - 1
+        for cyfra in liczba:
+            if not cyfra.isdigit():
+                liczba10 += (ord(cyfra.upper()) - 55) * (podstawa ** potega)
+            else:
+                liczba10 += int(cyfra) * (podstawa ** potega)
+            potega -= 1
+        return liczba10
+
+
 def dec2other():
     """Funkcja zmienia liczbę dziesiętną na system o podanej podstawie"""
 
